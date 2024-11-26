@@ -1,0 +1,109 @@
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>{{ "contact-us" | translate }}</h2>
+      <p>{{ "contact-us-text" | translate }}</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-5 d-flex align-items-stretch">
+        <div class="info">
+          <div class="address">
+            <i class="bi bi-geo-alt"></i>
+            <h4>{{ "adress" | translate }}</h4>
+            <p>{{ "adress-text" | translate }}</p>
+          </div>
+
+          <div class="email">
+            <i class="bi bi-envelope"></i>
+            <h4>{{ "email" | translate }}</h4>
+            <p>{{ "email-text" | translate }}</p>
+          </div>
+
+          <div class="phone">
+            <i class="bi bi-phone"></i>
+            <h4>{{ "phone" | translate }}</h4>
+            <p>{{ "phone-text" | translate }}</p>
+          </div>
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.2566435845965!2d28.64681834078996!3d41.01964079432787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b55f0d7f61b1a1%3A0x9b4dfc7fb97aabd3!2sSemerkand%20Evleri!5e0!3m2!1sfr!2str!4v1731079765025!5m2!1sfr!2str"
+            frameborder="0"
+            style="border: 0; width: 100%; height: 290px"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="col-lg-7 mt-lg-0 mt-5 d-flex align-items-stretch">
+        <form
+          (ngSubmit)="onSubmit(contactForm.value)"
+          #contactForm="ngForm"
+          class="php-email-form"
+          method="post"
+          role="form"
+        >
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label for="name">{{"Your-Name"|translate}}</label>
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                id="name"
+                ngModel
+                required
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="email">{{"Your-Email"|translate}}</label>
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                id="email"
+                ngModel
+                required
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">{{"Subject"|translate}}</label>
+            <input
+              type="text"
+              class="form-control"
+              name="subject"
+              id="subject"
+              ngModel
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">{{"Message"|translate}}</label>
+            <textarea
+              class="form-control"
+              name="message"
+              rows="8"
+              ngModel
+              required
+            ></textarea>
+          </div>
+          <div class="my-3">
+            <div class="loading">{{"Loading"|translate}}</div>
+            <div class="error-message"></div>
+            <div class="sent-message">
+              {{"thanks"|translate}}
+              
+            </div>
+          </div>
+          <div class="text-center">
+            <button type="submit">{{"Send-Message"|translate}}</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Contact Section -->

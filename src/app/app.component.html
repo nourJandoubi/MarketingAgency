@@ -1,0 +1,78 @@
+<header *ngIf="showNavbar" id="header" class="fixed-top">
+  <div class="container d-flex align-items-center">
+    <a (click)="scrollTo('hero')" class="logo me-auto">
+      <img src="assets/img/logoMarketing.png" alt="" class="img-fluid" />
+    </a>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li>
+          <a class="nav-link active" (click)="scrollTo('hero')">{{
+            "Home" | translate
+          }}</a>
+        </li>
+        <li>
+          <a class="nav-link" (click)="scrollTo('about')">{{
+            "about-us" | translate
+          }}</a>
+        </li>
+        <li>
+          <a class="nav-link" (click)="scrollTo('service')">{{
+            "service" | translate
+          }}</a>
+        </li>
+        <li>
+          <a class="nav-link" (click)="scrollTo('pricing')">{{
+            "pricing" | translate
+          }}</a>
+        </li>
+        <li>
+          <a class="nav-link" (click)="scrollTo('team')">{{
+            "team" | translate
+          }}</a>
+        </li>
+        <li>
+          <a class="nav-link" (click)="scrollTo('contact')">{{
+            "contact-us" | translate
+          }}</a>
+        </li>
+
+        <li>
+          <div class="container2" style="zoom: 20%; padding-left: 100px">
+            <input
+              hidden=""
+              id="check"
+              name="check"
+              type="checkbox"
+              (click)="switchLanguage()"
+            />
+            <label class="toggle" for="check">
+              <div class="toggle__circle"></div>
+            </label>
+            <div class="toggle-text">
+              <span style="padding-left: 20px; zoom: 75%"> AR</span>
+              <span
+                style="
+                  padding-left: 20px;
+                  zoom: 75%;
+                  position: absolute;
+                  bottom: 0;
+                "
+              >
+                EN</span
+              >
+            </div>
+          </div>
+        </li>
+        <li>
+          <button (click)="openWhatsApp()" class="getstarted">
+            {{ "get-started" | translate }}
+          </button>
+        </li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle" (click)="toggleNavbar()"></i>
+    </nav>
+  </div>
+</header>
+
+<router-outlet></router-outlet>

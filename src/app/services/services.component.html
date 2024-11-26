@@ -1,0 +1,300 @@
+<!-- Updated Services Section -->
+<section id="services" class="services section-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>{{ "service" | translate }}</h2>
+      <p>{{ "service-text" | translate }}</p>
+    </div>
+
+    <div class="row">
+      <div
+        class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4"
+        data-aos="zoom-in"
+        data-aos-delay="100"
+      >
+        <div class="parent">
+          <div class="card" id="card1">
+            <div class="glass">
+              <img
+                src="assets/img/dev-web.gif"
+                width="20%"
+                height="20%"
+                [ngClass]="{
+                  'small-pic': !isArabic,
+                  'small-pic-arabic': isArabic
+                }"
+              />
+            </div>
+            <div class="content">
+              <span class="title">{{ "web-dev" | translate }}</span>
+              <span class="text">{{ "web-dev-text" | translate }}</span>
+            </div>
+            <div class="bottom">
+              <div class="social-buttons-container"></div>
+              <div class="view-more">
+                <button
+                  class="view-more-button"
+                  [routerLink]="['/details', 'web-dev']"
+                >
+                  {{ "detail" | translate }}
+                </button>
+                <svg
+                  class="svg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4"
+        data-aos="zoom-in"
+        data-aos-delay="200"
+      >
+        <div class="parent">
+          <div class="card" id="card2">
+            <div class="glass">
+              <img
+                src="assets/img/marketing.gif"
+                width="20%"
+                height="20%"
+                [ngClass]="{
+                  'small-pic': !isArabic,
+                  'small-pic-arabic': isArabic
+                }"
+              />
+            </div>
+            <div class="content">
+              <span class="title">{{ "marketing" | translate }}</span>
+              <span class="text" style="font-size: small">{{
+                "marketing-text" | translate
+              }}</span>
+            </div>
+            <div class="bottom">
+              <div class="social-buttons-container"></div>
+              <div class="view-more">
+                <button
+                  class="view-more-button"
+                  [routerLink]="['/details', 'marketing']"
+                >
+                  {{ "detail" | translate }}
+                </button>
+                <svg
+                  class="svg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4"
+        data-aos="zoom-in"
+        data-aos-delay="300"
+      >
+        <div class="parent">
+          <div class="card" id="card3">
+            <div class="glass">
+              <img
+                src="assets/img/ads.gif"
+                width="20%"
+                height="20%"
+                [ngClass]="{
+                  'small-pic': !isArabic,
+                  'small-pic-arabic': isArabic
+                }"
+              />
+            </div>
+            <div class="content">
+              <span class="title">{{ "ads" | translate }}</span>
+              <span class="text" style="font-size: small">{{
+                "ads-text" | translate
+              }}</span>
+            </div>
+            <div class="bottom">
+              <div class="social-buttons-container"></div>
+              <div class="view-more">
+                <button
+                  class="view-more-button"
+                  [routerLink]="['/details', 'ads']"
+                >
+                  {{ "detail" | translate }}
+                </button>
+                <svg
+                  class="svg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4"
+        data-aos="zoom-in"
+        data-aos-delay="400"
+      >
+        <div class="parent">
+          <div class="card" id="card4">
+            <div class="glass">
+              <img
+                src="assets/img/social.gif"
+                width="20%"
+                height="20%"
+                [ngClass]="{
+                  'small-pic': !isArabic,
+                  'small-pic-arabic': isArabic
+                }"
+              />
+            </div>
+            <div class="content">
+              <span class="title">{{ "social-media-design" | translate }}</span>
+              <span class="text" style="font-size: small">{{
+                "social-media-design-text" | translate
+              }}</span>
+            </div>
+            <div class="bottom">
+              <div class="social-buttons-container"></div>
+              <div class="view-more">
+                <button
+                  class="view-more-button"
+                  [routerLink]="['/details', 'social-media-design']"
+                >
+                  {{ "detail" | translate }}
+                </button>
+                <svg
+                  class="svg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4"
+        data-aos="zoom-in"
+        data-aos-delay="500"
+      >
+        <div class="parent">
+          <div class="card" id="card5">
+            <div class="glass">
+              <img
+                src="assets/img/printing.gif"
+                width="20%"
+                height="20%"
+                [ngClass]="{
+                  'small-pic': !isArabic,
+                  'small-pic-arabic': isArabic
+                }"
+              />
+            </div>
+            <div class="content">
+              <span class="title">{{ "printing" | translate }}</span>
+              <span class="text" style="font-size: small">{{
+                "printing-text" | translate
+              }}</span>
+            </div>
+            <div class="bottom">
+              <div class="social-buttons-container"></div>
+              <div class="view-more">
+                <button
+                  class="view-more-button"
+                  [routerLink]="['/details', 'printing']"
+                >
+                  {{ "detail" | translate }}
+                </button>
+                <svg
+                  class="svg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4"
+        data-aos="zoom-in"
+        data-aos-delay="400"
+      >
+        <div class="parent">
+          <div class="card" id="card4">
+            <div class="glass">
+              <img
+                src="assets/img/branding.gif"
+                width="20%"
+                height="20%"
+                [ngClass]="{
+                  'small-pic': !isArabic,
+                  'small-pic-arabic': isArabic
+                }"
+              />
+            </div>
+            <div class="content">
+              <span class="title">{{
+                "Our-Branding-Services" | translate
+              }}</span>
+              <span class="text" style="font-size: small">{{
+                "Our-Branding-Services-text" | translate
+              }}</span>
+            </div>
+            <div class="bottom">
+              <div class="social-buttons-container"></div>
+              <div class="view-more">
+                <button
+                  class="view-more-button"
+                  [routerLink]="['/details', 'our-Branding-Services']"
+                >
+                  {{ "detail" | translate }}
+                </button>
+                <svg
+                  class="svg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Services Section -->

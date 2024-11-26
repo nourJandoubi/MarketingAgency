@@ -1,0 +1,88 @@
+<section id="about" class="about" style="margin-top: 200px">
+  <div class="container" data-aos="fade-up">
+    <div *ngIf="tableData" class="section-title">
+      <h2>{{ tableData.description }}</h2>
+    </div>
+
+    <div class="row content">
+      <div class="col-lg-6">
+        <img
+          [src]="tableData.image"
+          style="width: 100%; height: 100%; border-radius: 30px"
+          data-aos="fade-right"
+        />
+      </div>
+      <div class="col-lg-6 pt-4 pt-lg-0">
+        <div data-aos="zoom-in" data-aos-delay="100">
+          <p style="width: 100%; height: 100%; border-radius: 30px">
+            {{ tableData.summary }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" data-aos="fade-up" style="border-radius: 30px">
+    <div class="table-responsive">
+      <table class="pricing-table">
+        <thead>
+          <tr class="header">
+            <th *ngFor="let col of tableData.columns">{{ col }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of tableData.rows; let rowIndex = index">
+            <td
+              [ngClass]="{ 'hovered-column': hoveredColumn === 0 }"
+              (mouseenter)="onMouseEnter(0)"
+              (mouseleave)="onMouseLeave()"
+              style="
+                background: linear-gradient(135deg, #ffe4ff3a, #dedad0);
+                font-size: larger;
+              "
+            >
+              {{ row.service }}
+            </td>
+            <td
+              [ngClass]="{ 'hovered-column': hoveredColumn === 1 }"
+              (mouseenter)="onMouseEnter(1)"
+              (mouseleave)="onMouseLeave()"
+            >
+              {{ row.service }}
+            </td>
+            <td
+              [ngClass]="{ 'hovered-column': hoveredColumn === 2 }"
+              (mouseenter)="onMouseEnter(2)"
+              (mouseleave)="onMouseLeave()"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  #cfcfcf,
+                  #97948d
+                ); /* Silver gradient */
+                color: black;
+              "
+            >
+              <span class="price-tag">{{ row.silver }}</span>
+            </td>
+            <td
+              [ngClass]="{ 'hovered-column': hoveredColumn === 3 }"
+              (mouseenter)="onMouseEnter(3)"
+              (mouseleave)="onMouseLeave()"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  #ffd900,
+                  #e49100f0
+                ); /* Gold gradient */
+                color: black;
+              "
+            >
+              <span class="price-tag">{{ row.golden }}</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

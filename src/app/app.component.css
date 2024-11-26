@@ -1,0 +1,96 @@
+.nav-link scrollto active {
+  color: grey;
+  border: 1px;
+  border-color: black;
+}
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.fixed-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: #7d277e;
+  opacity: 0.7; /* Adjust the opacity as needed */
+  filter: blur(5px); /* Adjust the blur level */
+  z-index: -1; /* Ensure it stays behind the content */
+}
+li {
+  cursor: pointer;
+}
+/* Limit the height of the navbar in mobile view */
+@media (max-width: 150px) {
+  #navbar.navbar-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Full-screen height */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    background: #fff; /* Add a background to distinguish it */
+    z-index: 9999; /* Ensure it appears above other content */
+  }
+
+  /* Ensure the default navbar is hidden */
+  #navbar {
+    display: none;
+  }
+
+  /* Show the navbar only when the class is active */
+  #navbar.navbar-mobile {
+    display: block;
+  }
+}
+
+/* From Uiverse.io by Creatlydev */
+.container2 {
+  margin: auto;
+  color: hsl(0, 0%, 30%);
+  font-weight: 900;
+  font-size: 6rem;
+  display: flex;
+}
+
+.toggle {
+  width: 60px;
+  height: 155px;
+  background-color: hsl(0, 0%, 80%);
+  border-radius: 1.7rem;
+  padding: 0.25rem 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transition: background-color 300ms 300ms;
+}
+
+.toggle__circle {
+  width: 50px;
+  height: 50px;
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 50%;
+  margin-top: calc(155px - (0.25rem * 2) - 50px);
+  transition: margin 500ms ease-in-out;
+}
+
+.toggle-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.8;
+}
+
+#check:checked + .toggle > .toggle__circle {
+  margin-top: 0;
+}
+
+#check:checked + .toggle {
+  background-color: #41a63c;
+}
