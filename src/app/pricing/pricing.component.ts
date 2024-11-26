@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-pricing',
   templateUrl: './pricing.component.html',
-  styleUrls: ['./pricing.component.css']
+  styleUrls: ['./pricing.component.css'],
 })
 export class PricingComponent implements OnInit, OnDestroy {
   isArabic = false;
@@ -36,4 +36,3 @@ export class PricingComponent implements OnInit, OnDestroy {
     }
   }
 }
-

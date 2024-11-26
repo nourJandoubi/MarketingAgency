@@ -6,26 +6,51 @@
       <p>{{ "packages-text" | translate }}</p>
     </div>
 
-    <div [ngClass]="{ 'member-info': !isArabic, 'member-info-arabic': isArabic }">
+    <div
+      [ngClass]="{ 'member-info': !isArabic, 'member-info-arabic': isArabic }"
+    >
       <div class="row">
-        
         <!-- Normal Package -->
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
           <div class="box">
-            <h3>{{ 'Normal-Package' | translate }}</h3>
+            <h3>{{ "Normal-Package" | translate }}</h3>
             <h4><sup>$</sup>700</h4>
             <ul>
-              <li class="package-feature"><i class="bx bx-check"></i>{{ 'Normal-Package1' | translate }}</li>
-              <li class="package-feature"><i class="bx bx-check"></i>{{ 'Normal-Package2' | translate }}</li>
-              <li class="package-feature"><i class="bx bx-check"></i>{{ 'Normal-Package3' | translate }}</li>
-              <li class="package-feature"><i class="bx bx-check"></i>{{ 'Normal-Package4' | translate }}</li>
-              <li class="package-feature na"><i class="bx bx-x" style="color: red;"></i>{{ 'Silver-Package1' | translate }}</li>
-              <li class="package-feature na"><i class="bx bx-x" style="color: red;"></i>{{ 'Silver-Package2' | translate }}</li>
+              <li class="package-feature">
+                <i class="bx bx-check"></i>{{ "Normal-Package1" | translate }}
+              </li>
+              <li class="package-feature">
+                <i class="bx bx-check"></i>{{ "Normal-Package2" | translate }}
+              </li>
+              <li class="package-feature">
+                <i class="bx bx-check"></i>{{ "Normal-Package3" | translate }}
+              </li>
+              <li class="package-feature">
+                <i class="bx bx-check"></i>{{ "Normal-Package4" | translate }}
+              </li>
+              <li class="package-feature na">
+                <i class="bx bx-x" style="color: red"></i
+                >{{ "Silver-Package1" | translate }}
+              </li>
+              <li class="package-feature na">
+                <i class="bx bx-x" style="color: red"></i
+                >{{ "Silver-Package2" | translate }}
+              </li>
             </ul>
-            <a 
-              href="https://wa.me/+905540148868?text={{ 'I am interested in the Normal Package.' + '%0A%0APrice: $700%0A%0ADetails:%0A' + ('Normal-Package1' | translate) + '%0A' + ('Normal-Package2' | translate) + '%0A' + ('Normal-Package3' | translate) + '%0A' + ('Normal-Package4' | translate) }}" 
-              target="_blank" 
-              class="buy-btn" 
+            <a
+              href="https://wa.me/+905540148868?text={{
+                'I am interested in the Normal Package.' +
+                  '%0A%0APrice: $700%0A%0ADetails:%0A' +
+                  ('Normal-Package1' | translate) +
+                  '%0A' +
+                  ('Normal-Package2' | translate) +
+                  '%0A' +
+                  ('Normal-Package3' | translate) +
+                  '%0A' +
+                  ('Normal-Package4' | translate)
+              }}"
+              target="_blank"
+              class="buy-btn"
               aria-label="Get started with Normal Package"
             >
               {{ "get-started" | translate }}
@@ -34,20 +59,42 @@
         </div>
 
         <!-- Silver Package -->
-        <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
+        <div
+          class="col-lg-4 mt-4 mt-lg-0"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <div class="box featured">
             <h3>{{ "Silver-Package" | translate }}</h3>
             <h4><sup>$</sup>1000</h4>
             <ul>
-              <li class="package-feature"><i class="bx bx-check"></i>{{ "Silver-Package1" | translate }}</li>
-              <li class="package-feature"><i class="bx bx-check"></i>{{ "Silver-Package2" | translate }}</li>
-              <li class="package-feature"><i class="bx bx-check"></i>{{ "Silver-Package3" | translate }}</li>
-              <li class="package-feature"><i class="bx bx-check"></i>{{ "Silver-Package4" | translate }}</li>
+              <li class="package-feature">
+                <i class="bx bx-check"></i>{{ "Silver-Package1" | translate }}
+              </li>
+              <li class="package-feature">
+                <i class="bx bx-check"></i>{{ "Silver-Package2" | translate }}
+              </li>
+              <li class="package-feature">
+                <i class="bx bx-check"></i>{{ "Silver-Package3" | translate }}
+              </li>
+              <li class="package-feature">
+                <i class="bx bx-check"></i>{{ "Silver-Package4" | translate }}
+              </li>
             </ul>
-            <a 
-              href="https://wa.me/+905540148868?text={{ 'I am interested in the Silver Package.' + '%0A%0APrice: $1000%0A%0ADetails:%0A' + ('Silver-Package1' | translate) + '%0A' + ('Silver-Package2' | translate) + '%0A' + ('Silver-Package3' | translate) + '%0A' + ('Silver-Package4' | translate) }}" 
-              target="_blank" 
-              class="buy-btn" 
+            <a
+              href="https://wa.me/+905540148868?text={{
+                'I am interested in the Silver Package.' +
+                  '%0A%0APrice: $1000%0A%0ADetails:%0A' +
+                  ('Silver-Package1' | translate) +
+                  '%0A' +
+                  ('Silver-Package2' | translate) +
+                  '%0A' +
+                  ('Silver-Package3' | translate) +
+                  '%0A' +
+                  ('Silver-Package4' | translate)
+              }}"
+              target="_blank"
+              class="buy-btn"
               aria-label="Get started with Silver Package"
             >
               {{ "get-started" | translate }}
@@ -56,27 +103,48 @@
         </div>
 
         <!-- Gold Package -->
-        <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+        <div
+          class="col-lg-4 mt-4 mt-lg-0"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           <div class="box" id="package3">
             <h3>{{ "Gold-Package" | translate }}</h3>
             <h4><sup>$</sup>1400</h4>
             <ul>
-              <li class="package-feature"><i class="bx bx-check"></i>{{ "Gold-Package1" | translate }}</li>
-              <li class="package-feature"><i class="bx bx-check"></i>{{ "Gold-Package2" | translate }}</li>
-              <li class="package-feature"><i class="bx bx-check"></i>{{ "Gold-Package3" | translate }}</li>
-              <li class="package-feature"><i class="bx bx-check"></i>{{ "Gold-Package4" | translate }}</li>
+              <li class="package-feature">
+                <i class="bx bx-check"></i>{{ "Gold-Package1" | translate }}
+              </li>
+              <li class="package-feature">
+                <i class="bx bx-check"></i>{{ "Gold-Package2" | translate }}
+              </li>
+              <li class="package-feature">
+                <i class="bx bx-check"></i>{{ "Gold-Package3" | translate }}
+              </li>
+              <li class="package-feature">
+                <i class="bx bx-check"></i>{{ "Gold-Package4" | translate }}
+              </li>
             </ul>
-            <a 
-              href="https://wa.me/+905540148868?text={{ 'I am interested in the Gold Package.' + '%0A%0APrice: $1400%0A%0ADetails:%0A' + ('Gold-Package1' | translate) + '%0A' + ('Gold-Package2' | translate) + '%0A' + ('Gold-Package3' | translate) + '%0A' + ('Gold-Package4' | translate) }}" 
-              target="_blank" 
-              class="buy-btn" 
+            <a
+              href="https://wa.me/+905540148868?text={{
+                'I am interested in the Gold Package.' +
+                  '%0A%0APrice: $1400%0A%0ADetails:%0A' +
+                  ('Gold-Package1' | translate) +
+                  '%0A' +
+                  ('Gold-Package2' | translate) +
+                  '%0A' +
+                  ('Gold-Package3' | translate) +
+                  '%0A' +
+                  ('Gold-Package4' | translate)
+              }}"
+              target="_blank"
+              class="buy-btn"
               aria-label="Get started with Gold Package"
             >
               {{ "get-started" | translate }}
             </a>
           </div>
         </div>
-
       </div>
     </div>
   </div>

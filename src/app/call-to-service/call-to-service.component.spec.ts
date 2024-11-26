@@ -8,9 +8,8 @@ describe('CallToServiceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CallToServiceComponent ]
-    })
-    .compileComponents();
+      declarations: [CallToServiceComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CallToServiceComponent);
     component = fixture.componentInstance;

@@ -5,7 +5,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 @Component({
   selector: 'app-call-to-service',
   templateUrl: './call-to-service.component.html',
-  styleUrls: ['./call-to-service.component.css']
+  styleUrls: ['./call-to-service.component.css'],
 })
 export class CallToServiceComponent implements OnInit, OnDestroy {
   isArabic = false;
@@ -35,5 +35,4 @@ export class CallToServiceComponent implements OnInit, OnDestroy {
       this.langChangeSubscription.unsubscribe();
     }
   }
-
 }

@@ -1,42 +1,34 @@
-  <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
+<section id="about" class="about">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>{{ "about-us" | translate }}</h2>
+    </div>
 
-        <div class="section-title">
-          <h2>{{"about-us"|translate}}</h2>
-        </div>
-
-
-        <div class="row content">
-          <div class="col-lg-6">
-          
-          <img src="assets/img/about-us-image.png"  style="width:90%;" class="img-fluid"   data-aos="fade-right"
-          data-aos-delay="100">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-
-            <div class="card"  data-aos="zoom-in"
-            data-aos-delay="100">
-                <h3 class="card__title">{{"mission"|translate}} 
-                </h3>
-                <p class="card__content">{{"mission-text"|translate}}</p>
-            </div>
-            <div class="card" data-aos="zoom-in"
-            data-aos-delay="100">
-              <h3 class="card__title">{{"vision"|translate}} 
-              </h3>
-              <p class="card__content">{{"vision-text"|translate}} </p>
-             
-          </div>
-          <div class="card" data-aos="zoom-in"
-          data-aos-delay="100">
-            <h3 class="card__title">{{"Values"|translate}} 
-            </h3>
-            <p class="card__content"> {{"Values-text"|translate}} </p>
-           
-           
-        </div>
-          </div>
-        </div>
-
+    <div class="row content">
+      <div class="col-lg-6">
+        <img
+          src="assets/img/about-us-image.png"
+          style="width: 90%"
+          class="img-fluid"
+          data-aos="fade-right"
+          data-aos-delay="100"
+        />
       </div>
-    </section><!-- End About Us Section -->
+      <div class="col-lg-6 pt-4 pt-lg-0">
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
+          <h3 class="card__title">{{ "mission" | translate }}</h3>
+          <p class="card__content">{{ "mission-text" | translate }}</p>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
+          <h3 class="card__title">{{ "vision" | translate }}</h3>
+          <p class="card__content">{{ "vision-text" | translate }}</p>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
+          <h3 class="card__title">{{ "Values" | translate }}</h3>
+          <p class="card__content">{{ "Values-text" | translate }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End About Us Section -->

@@ -1,12 +1,11 @@
 .custom-snackbar {
-    background-color: #7D277E !important; /* Change background color */
-    color: #ffffff !important; /* Change text color */
-    font-size: 16px; /* Adjust font size */
-    border-radius: 8px; /* Rounded corners */
-    padding: 10px; /* Custom padding */
-    position: absolute !important;
-    right: 0; /* Adjust as necessary */
-    bottom: 0; /* Adjust for bottom alignment */
-    transform: translateX(0); /* Prevents default centering */
-  }
- 
+  background-color: #7d277e !important; /* Change background color */
+  color: #ffffff !important; /* Change text color */
+  font-size: 16px; /* Adjust font size */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px; /* Custom padding */
+  position: absolute !important;
+  right: 0; /* Adjust as necessary */
+  bottom: 0; /* Adjust for bottom alignment */
+  transform: translateX(0); /* Prevents default centering */
+}
