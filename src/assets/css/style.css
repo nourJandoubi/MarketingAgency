@@ -1092,7 +1092,7 @@ section {
   border-radius: 5px;
   background: #fff;
   transition: 0.5s;
-  height: 200px;
+  height: fit-content;
 }
 
 .team .member .pic {

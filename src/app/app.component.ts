@@ -11,27 +11,28 @@ import { filter } from 'rxjs';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'Marketing Company';
+  title = 'S-Branding';
   isCollapsed = true;
   isTranslationsLoaded = false;
   showNavbar: boolean = true;
   isNavbarOpen: boolean = false;
-
+  showFullNavbar: boolean = true;
   // Map section IDs to dynamic titles
   private sectionTitles: { [key: string]: string } = {
-    hero: 'Marketing Company - Home',
-    about: 'Marketing Company - About Us',
-    service: 'Marketing Company - Services',
-    pricing: 'Marketing Company - Pricing',
-    team: 'Marketing Company - Team',
-    contact: 'Marketing Company - Contact Us',
+    hero: 'S-Branding - Home',
+    about: 'S-Branding - About Us',
+    service: 'S-Branding - Services',
+    pricing: 'S-Branding - Pricing',
+    team: 'S-Branding - Team',
+    contact: 'S-Branding - Contact Us',
   };
 
   constructor(
     private translate: TranslateService,
     private titleService: Title,
-    private viewportScroller: ViewportScroller,
     private router: Router,
+
+    private viewportScroller: ViewportScroller,
     private activatedRoute: ActivatedRoute
   ) {
     this.translate.setDefaultLang('en');
@@ -41,6 +42,7 @@ export class AppComponent implements OnInit {
     this.isNavbarOpen = !this.isNavbarOpen;
 
     const navbar = document.getElementById('navbar');
+
     const toggleIcon = document.querySelector('.mobile-nav-toggle');
 
     if (navbar) {
@@ -60,6 +62,12 @@ export class AppComponent implements OnInit {
     }
   }
 
+  updateNavbarVisibility() {
+    // Show full navbar only if the current path is the main path
+    this.showFullNavbar =
+      this.router.url === '/' || this.router.url === '/home';
+  }
+
   ngOnInit(): void {
     this.translate.use('en').subscribe(() => {
       this.isTranslationsLoaded = true;
@@ -76,6 +84,12 @@ export class AppComponent implements OnInit {
         const currentRoute = this.router.url;
         this.showNavbar = !currentRoute.includes('404NotFound'); // Hide navbar for 404 routes
       });
+
+    // Subscribe to router events to detect path changes
+    this.router.events.subscribe(() => {
+      this.updateNavbarVisibility();
+    });
+    this.updateNavbarVisibility();
   }
 
   @HostListener('window:scroll', [])

@@ -13,7 +13,11 @@
         />
       </div>
       <div class="col-lg-6 pt-4 pt-lg-0">
-        <div data-aos="zoom-in" data-aos-delay="100">
+        <div
+          data-aos="zoom-in"
+          data-aos-delay="100"
+          [dir]="isArabic ? 'rtl' : 'ltr'"
+        >
           <p style="width: 100%; height: 100%; border-radius: 30px">
             {{ tableData.summary }}
           </p>

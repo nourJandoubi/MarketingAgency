@@ -94,3 +94,124 @@ li {
 #check:checked + .toggle {
   background-color: #41a63c;
 }
+
+.navbar2 {
+  padding: 0;
+}
+
+.navbar2 ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar2 li {
+  position: relative;
+}
+
+.navbar2 a,
+.navbar2 a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #d9b04b;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar2 a i,
+.navbar2 a:focus i {
+  font-size: 17px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar2 a:hover,
+.navbar2 .active,
+.navbar2 .active:focus,
+.navbar2 li:hover > a {
+  color: #e8e8e8;
+  border-color: #d9b04b;
+  text-decoration: underline;
+}
+
+.navbar2 .getstarted {
+  padding: 8px 20px;
+  margin-left: 30px;
+  border-radius: 50px;
+  background-color: #d9b04b;
+  color: #f4f2ed;
+  font-size: 14px;
+  border: 2px solid #d9b04b;
+  font-weight: 600;
+}
+
+.navbar2 .getstarted:hover {
+  color: #fff;
+  background: #e8e8e8;
+  border-color: #e7e7e7;
+  color: #d9b04b;
+}
+
+.navbar2 .dropdown ul {
+  color: #d9b04b;
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(168, 185, 225, 0.25);
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.navbar2 .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar2 .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: none;
+  font-weight: 500;
+  color: #0c3c53;
+}
+
+.navbar2 .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar2 .dropdown ul a:hover,
+.navbar2 .dropdown ul .active:hover,
+.navbar2 .dropdown ul li:hover > a {
+  color: #7d277e;
+}
+
+.navbar2 .dropdown:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar2 .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar2 .dropdown .dropdown:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
