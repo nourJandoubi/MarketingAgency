@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClient, HttpClientModule} from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -42,7 +42,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     ContactComponent,
     ClientsComponent,
     ServiceDetailComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     MatCardModule,
@@ -55,12 +55,13 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
+        useFactory: (http: HttpClient) =>
+          new TranslateHttpLoader(http, './assets/i18n/', '.json'),
         deps: [HttpClient],
       },
-    })
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -18,7 +18,14 @@
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/assets"
+              },
+              "src/favicon.ico"
+            ],
             "styles": [
               "src/custom-theme.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
