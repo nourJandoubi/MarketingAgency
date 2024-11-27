@@ -17,6 +17,7 @@ export class AppComponent implements OnInit {
   showNavbar: boolean = true;
   isNavbarOpen: boolean = false;
   showFullNavbar: boolean = true;
+  isArabic: boolean = false;
   // Map section IDs to dynamic titles
   private sectionTitles: { [key: string]: string } = {
     hero: 'S-Branding - Home',
@@ -31,7 +32,6 @@ export class AppComponent implements OnInit {
     private translate: TranslateService,
     private titleService: Title,
     private router: Router,
-
     private viewportScroller: ViewportScroller,
     private activatedRoute: ActivatedRoute
   ) {
@@ -72,7 +72,7 @@ export class AppComponent implements OnInit {
     this.translate.use('en').subscribe(() => {
       this.isTranslationsLoaded = true;
     });
-
+    this.isArabic = this.translate.currentLang == 'ar';
     this.translate.onLangChange.subscribe(() => {
       this.isTranslationsLoaded = true;
     });
@@ -111,10 +111,12 @@ export class AppComponent implements OnInit {
 
   switchLanguage(): void {
     const language = this.translate.currentLang === 'en' ? 'ar' : 'en';
+    this.isArabic = this.translate.currentLang == 'ar';
     this.isTranslationsLoaded = false;
     this.translate.use(language).subscribe(() => {
       this.isTranslationsLoaded = true;
     });
+    this.isArabic = this.translate.currentLang == 'ar';
   }
 
   openWhatsApp(): void {

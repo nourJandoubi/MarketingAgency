@@ -1,44 +1,14 @@
-<header *ngIf="showNavbar" id="header" class="fixed-top">
+<header
+  *ngIf="showNavbar"
+  id="header"
+  class="fixed-top"
+  [ngClass]="{ 'arabic-font': isArabic }"
+>
   <div class="container d-flex align-items-center">
     <a class="logo me-auto" [routerLink]="'/'">
       <img src="assets/img/logoMarketing.png" alt="" class="img-fluid" />
     </a>
-    <nav class="navbar2">
-      <ul *ngIf="!showFullNavbar" style="float: left">
-        <li>
-          <div class="container2" style="zoom: 20%; padding-left: 100px">
-            <input
-              hidden
-              id="check"
-              name="check"
-              type="checkbox"
-              (click)="switchLanguage()"
-            />
-            <label class="toggle" for="check">
-              <div class="toggle__circle"></div>
-            </label>
-            <div class="toggle-text">
-              <span style="padding-left: 20px; zoom: 75%"> AR</span>
-              <span
-                style="
-                  padding-left: 20px;
-                  zoom: 75%;
-                  position: absolute;
-                  bottom: 0;
-                "
-              >
-                EN</span
-              >
-            </div>
-          </div>
-        </li>
-        <li>
-          <button (click)="openWhatsApp()" class="getstarted">
-            {{ "get-started" | translate }}
-          </button>
-        </li>
-      </ul>
-    </nav>
+
     <nav id="navbar" class="navbar">
       <ul>
         <!-- Only show full navbar items when 'showFullNavbar' is true -->
@@ -72,9 +42,11 @@
             {{ "contact-us" | translate }}
           </a>
         </li>
-
-        <!-- Language toggle -->
-        <li *ngIf="showFullNavbar">
+      </ul>
+    </nav>
+    <nav class="navbar2">
+      <ul style="float: left">
+        <li>
           <div class="container2" style="zoom: 20%; padding-left: 100px">
             <input
               hidden
@@ -101,21 +73,21 @@
             </div>
           </div>
         </li>
-
-        <!-- 'Get Started' button -->
-        <li *ngIf="showFullNavbar">
+        <li>
           <button (click)="openWhatsApp()" class="getstarted">
             {{ "get-started" | translate }}
           </button>
         </li>
       </ul>
-      <i
-        *ngIf="showFullNavbar"
-        class="bi bi-list mobile-nav-toggle"
-        (click)="toggleNavbar()"
-      ></i>
     </nav>
+    <i
+      *ngIf="showFullNavbar"
+      class="bi bi-list mobile-nav-toggle"
+      style="padding-left: 2%"
+      (click)="toggleNavbar()"
+    ></i>
   </div>
 </header>
-
-<router-outlet></router-outlet>
+<div [ngClass]="{ 'arabic-font': isArabic }">
+  <router-outlet></router-outlet>
+</div>
