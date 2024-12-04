@@ -9,8 +9,12 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'details/:id', component: ServiceDetailComponent },
   { path: '404NotFound', component: PageNotFoundComponent },
-  { path: '**', redirectTo: '/404NotFound' },
+  { path: '**', redirectTo: '/home' },
+  { path: '**', redirectTo: '/404NotFound' }
+       
+  
 ];
+
 
 @NgModule({
   imports: [

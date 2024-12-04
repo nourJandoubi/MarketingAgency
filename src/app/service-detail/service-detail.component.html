@@ -51,8 +51,16 @@
               [ngClass]="{ 'hovered-column': hoveredColumn === 1 }"
               (mouseenter)="onMouseEnter(1)"
               (mouseleave)="onMouseLeave()"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  #cfcfcf,
+                  #edece8
+                ); /* Silver gradient */
+                color: black;
+              "
             >
-              {{ row.Basic }}
+              {{ row.basic }}
             </td>
             <td
               [ngClass]="{ 'hovered-column': hoveredColumn === 2 }"
@@ -76,8 +84,8 @@
               style="
                 background: linear-gradient(
                   135deg,
-                  #ffd900,
-                  #e49100f0
+                  #f5dc4a,
+                  #D9B04B
                 ); /* Gold gradient */
                 color: black;
               "

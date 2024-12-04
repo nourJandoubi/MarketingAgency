@@ -4,6 +4,7 @@ import { Title } from '@angular/platform-browser';
 import { ViewportScroller } from '@angular/common';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,20 @@ import { filter } from 'rxjs';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+ 
+
+  setCookie() {
+    // Setting a cookie with SameSite=None and Secure
+    this.cookieService.set(
+      'exampleCookie', 
+      'cookieValue', 
+      7, // Expiration in days
+      '/', // Path
+      's-branding.com', // Domain
+      true, // Secure
+      'None' // SameSite policy
+    );
+  }
   title = 'S-Branding';
   isCollapsed = true;
   isTranslationsLoaded = false;
@@ -33,7 +48,8 @@ export class AppComponent implements OnInit {
     private titleService: Title,
     private router: Router,
     private viewportScroller: ViewportScroller,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private cookieService: CookieService
   ) {
     this.translate.setDefaultLang('en');
   }

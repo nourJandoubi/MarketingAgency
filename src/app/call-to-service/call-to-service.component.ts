@@ -24,9 +24,7 @@ export class CallToServiceComponent implements OnInit, OnDestroy {
       }
     );
 
-    // Log current language
-    console.log('Loading translations...');
-    console.log(this.translate.currentLang);
+    
   }
 
   ngOnDestroy(): void {

@@ -23,8 +23,6 @@ export class HomeComponent {
       }
     );
 
-    console.log('Loading translations...');
-    console.log(this.translate.currentLang);
   }
 
   ngOnDestroy(): void {

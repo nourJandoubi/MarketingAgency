@@ -22,7 +22,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ServiceDetailComponent } from './service-detail/service-detail.component';
 import { MatCardModule } from '@angular/material/card';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
+import { CookieService } from 'ngx-cookie-service';
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
 }
@@ -61,7 +61,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
       },
     }),
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
